@@ -19,7 +19,9 @@ const detailPokemon = (pokemon) => {
 
   <div class="info">
   <h1>${pokemon.name}</h1>
-  <span>#${pokemon.number.toString().padStart(3, '0')}</span>
+  <span class="info-number">#${pokemon.number
+    .toString()
+    .padStart(3, '0')}</span>
   </div>
   
 
