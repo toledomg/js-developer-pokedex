@@ -14,6 +14,10 @@
   overflow: hidden;
 }
 
+.modal-detail::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .background-image {
   /* pokeball image */
 
@@ -27,8 +31,6 @@
 
   top: -19px;
   right: -47px;
-
-  z-index: 999999;
 }
 
 .btnOpenDetail {
@@ -152,6 +154,10 @@
 .modal-detail .details img {
   width: auto;
   height: 190px;
+
+  filter: drop-shadow(2px 2px 8px #222222);
+
+  z-index: 1;
 }
 
 .modal-detail .about {
@@ -187,13 +193,17 @@
 .modal-detail .about .stats li > h2 {
   width: 6.25rem;
 
-  color: #787b83;
+  font-weight: 500;
+
+  color: #1b1b1b;
 }
 
 .modal-detail .about .stats li > h3 {
   width: 2.5rem;
 
-  color: #787b83;
+  font-weight: 500;
+
+  color: #1b1b1b;
 }
 
 .info-abilities {

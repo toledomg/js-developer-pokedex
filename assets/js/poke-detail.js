@@ -113,9 +113,13 @@ const detailPokemon = (pokemon) => {
 };
 //
 
+let scrollPosition = 0;
+
 async function openDetailModal() {
   const openModal = document.getElementById('openDetail');
   const buttons = document.querySelectorAll('.btnOpenDetail');
+  scrollPosition = window.scrollY;
+
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
@@ -134,12 +138,14 @@ async function openDetailModal() {
           if (event.key === 'Escape' || event.key === 'Esc') {
             openModal.close();
             openModal.innerHTML = '';
+            window.scrollTo(0, scrollPosition);
           }
         });
         document.addEventListener('click', (event) => {
           if (event.target === openModal) {
             openModal.close();
             openModal.innerHTML = '';
+            window.scrollTo(0, scrollPosition);
           }
         });
       });
@@ -154,5 +160,6 @@ function closeModalDetailPokemon() {
   btnCloseModal.addEventListener('click', () => {
     openModal.close();
     openModal.innerHTML = '';
+    window.scrollTo(0, scrollPosition);
   });
 }

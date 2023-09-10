@@ -71,7 +71,7 @@ function footer() {
   return footer;
 }
 
-footer();
+// footer();
 
 loadPokemonItens(offset, limit);
 
