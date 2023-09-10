@@ -88,6 +88,21 @@
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 1rem;
+  position: relative;
+}
+
+.pokemon .background-img {
+  /* pokeball image */
+  max-width: 100%;
+
+  opacity: 0.08;
+
+  color: #ffffff;
+
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  rotate: -20deg;
 }
 
 .pokemon .number {
@@ -95,6 +110,8 @@
   opacity: 0.3;
   text-align: right;
   font-size: 0.625rem;
+
+  z-index: 1;
 }
 
 .pokemon .name {
@@ -132,6 +149,8 @@
 
   /* filter: drop-shadow(3px 3px 5px 0px rgba(0, 0, 0, 1)); */
   filter: drop-shadow(2px 2px 8px #222222);
+
+  z-index: 1;
 }
 
 .pagination {

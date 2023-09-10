@@ -76,6 +76,12 @@ const detailPokemon = (pokemon) => {
           <div class="progress-other" style="width: ${
             pokemon.stats['special-attack']
           }%"></div>
+
+          <div class="over-progress" style="width: ${Math.max(
+            pokemon.stats['special-attack'] - 100,
+            0
+          )}%;"></div>
+          
         </li>
         <li>
           <h2>Sp.Def:</h2>

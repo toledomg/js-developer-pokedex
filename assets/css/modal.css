@@ -230,6 +230,7 @@
   background-color: #ffffff; /* Cor de fundo da barra de progresso */
   border-radius: 5px; /* Borda arredondada */
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.22);
+  position: relative;
 }
 
 .progress {
@@ -237,8 +238,6 @@
   height: 100%;
   background-color: #e44b4b; /* Cor da barra de progresso preenchida */
   border-radius: 5px; /* Borda arredondada */
-  width: 0%; /* Inicialmente, a barra está vazia */
-  transition: width 0.5s ease-in-out; /* Adiciona uma transição suave à largura */
 }
 
 .progress-other {
@@ -246,6 +245,15 @@
   height: 100%;
   background-color: #1cac8d;
   border-radius: 5px;
-  width: 0%;
-  transition: width 0.5s ease-in-out;
+}
+
+/* Estilize a parte da barra que está acima de 100% */
+.over-progress {
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  bottom: 0;
+  left: 0;
+  background-color: #d8f436; /* Cor da barra que ultrapassou 100% */
+  border-radius: 5px;
 }
