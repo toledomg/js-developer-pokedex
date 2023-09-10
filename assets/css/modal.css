@@ -14,6 +14,10 @@
   overflow: hidden;
 }
 
+.modal-detail::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .background-image {
   /* pokeball image */
 
@@ -187,13 +191,17 @@
 .modal-detail .about .stats li > h2 {
   width: 6.25rem;
 
-  color: #787b83;
+  font-weight: 500;
+
+  color: #1b1b1b;
 }
 
 .modal-detail .about .stats li > h3 {
   width: 2.5rem;
 
-  color: #787b83;
+  font-weight: 500;
+
+  color: #1b1b1b;
 }
 
 .info-abilities {
