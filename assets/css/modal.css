@@ -31,8 +31,6 @@
 
   top: -19px;
   right: -47px;
-
-  z-index: 999999;
 }
 
 .btnOpenDetail {
@@ -156,6 +154,10 @@
 .modal-detail .details img {
   width: auto;
   height: 190px;
+
+  filter: drop-shadow(2px 2px 8px #222222);
+
+  z-index: 1;
 }
 
 .modal-detail .about {

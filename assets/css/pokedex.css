@@ -128,7 +128,10 @@
 
 .pokemon .detail img {
   max-width: 100%;
-  height: 70px;
+  height: 80px;
+
+  /* filter: drop-shadow(3px 3px 5px 0px rgba(0, 0, 0, 1)); */
+  filter: drop-shadow(2px 2px 8px #222222);
 }
 
 .pagination {
