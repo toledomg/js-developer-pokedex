@@ -1,31 +1,71 @@
 .modal-detail {
   min-width: 330px;
-  height: auto;
   max-height: 600px;
 
   display: flex;
   align-items: center;
 
+  outline: none;
+
   border: none;
   border-radius: 1rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.background-image {
+  /* pokeball image */
+
+  max-width: 200px;
+
+  opacity: 0.1;
+
+  color: #ffffff;
+
+  position: absolute;
+
+  top: -19px;
+  right: -47px;
+
+  z-index: 999999;
 }
 
 .btnOpenDetail {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 1rem;
 
   align-items: center;
 
-  color: #242323;
+  color: #ffffff;
+  background-color: #6c79db;
 
-  opacity: 0.5;
+  border: none;
+  border-radius: 1rem;
+
+  opacity: 0.9;
+
+  padding: 0.25rem 0.5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+
   cursor: pointer;
+  outline: none;
+}
+
+.modal-detail .container-info {
+  height: 600px;
 }
 
 .modal-detail section {
   width: 100%;
   height: 100%;
 
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .modal-detail header {
@@ -49,6 +89,8 @@
   filter: brightness(1.1);
 
   cursor: pointer;
+
+  padding: 5px 5px;
 }
 
 .modal-detail .info {
@@ -57,7 +99,7 @@
   align-items: center;
 
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px 10px 0px 10px;
 }
 
 .modal-detail .info h1 {
@@ -71,9 +113,9 @@
 
 .modal-detail .info span {
   color: #000;
-  opacity: 0.3;
   text-align: right;
   font-size: 1rem;
+  opacity: 0.3;
 }
 
 .modal-detail .details {
@@ -83,33 +125,60 @@
   padding: 30px;
 }
 
+.modal-detail .typeDetails {
+  filter: brightness(1.1);
+}
+
 .modal-detail .details .typeDetails {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 10px;
+  outline: none;
 }
 
 .modal-detail .details .typeDetails h3 {
   font-size: 0.825rem;
   border-radius: 20px;
-  padding: 5px;
+  padding: 5px 10px;
+
+  color: #fff;
+}
+
+.info-abilities {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-bottom: 10px;
+}
+
+.info-abilities > h3 {
+  background-color: #ffffff;
+  opacity: 0.6;
+  border-radius: 1rem;
+  padding: 10px;
 }
 
 .modal-detail .details img {
-  width: zuto;
+  width: auto;
   height: 110px;
 }
 
 .modal-detail .about {
+  height: 340px;
+
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.9));
+
+  padding: 25px;
   list-style: none;
-  margin-bottom: 20px;
 }
 
 .modal-detail .about > h2 {
   font-size: 1.25rem;
   font-weight: 600;
+
+  color: #4a4e57;
 
   margin-bottom: 10px;
 }
@@ -121,5 +190,48 @@
 .modal-detail .about .stats li {
   display: flex;
 
-  gap: 10px;
+  align-items: center;
+
+  gap: 0.625rem;
+}
+
+.modal-detail .about .stats li > h2 {
+  width: 6.25rem;
+
+  color: #787b83;
+}
+
+.modal-detail .about .stats li > h3 {
+  width: 2.5rem;
+
+  color: #787b83;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 100%;
+  height: 5px; /* Altura da barra de progresso */
+
+  opacity: 0.8;
+  background-color: #ffffff; /* Cor de fundo da barra de progresso */
+  border-radius: 5px; /* Borda arredondada */
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.22);
+}
+
+.progress {
+  max-width: 100%;
+  height: 100%;
+  background-color: #e44b4b; /* Cor da barra de progresso preenchida */
+  border-radius: 5px; /* Borda arredondada */
+  width: 0%; /* Inicialmente, a barra está vazia */
+  transition: width 0.5s ease-in-out; /* Adiciona uma transição suave à largura */
+}
+
+.progress-other {
+  max-width: 100%;
+  height: 100%;
+  background-color: #1cac8d;
+  border-radius: 5px;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
 }

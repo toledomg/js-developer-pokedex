@@ -3,14 +3,16 @@ const loadMoreButton = document.getElementById('loadMoreButton');
 
 const pokemonDetail = document.getElementById('pokeDetails');
 
-const maxRecords = 151;
+const maxRecords = 2000;
 const limit = 10;
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
   return `
         <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
+            <span class="number">#${pokemon.number
+              .toString()
+              .padStart(3, '0')}</span>
             <span class="name">${pokemon.name}</span>
 
             <div class="detail">

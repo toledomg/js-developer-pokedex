@@ -70,7 +70,8 @@ function convertPokeApiDetailToCard(pokeDetail) {
 }
 
 pokeApi.getPokemonCardDetail = (id) => {
-  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+  const idWithoutLeadingZeros = parseInt(id, 10).toString();
+  const url = `https://pokeapi.co/api/v2/pokemon/${idWithoutLeadingZeros}`;
 
   return fetch(url)
     .then((response) => response.json())
