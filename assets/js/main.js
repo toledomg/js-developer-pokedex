@@ -1,4 +1,4 @@
-const pokemonList = document.getElementById('pokemonList');
+// const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 
 const pokemonDetail = document.getElementById('pokeDetails');
@@ -71,7 +71,7 @@ function footer() {
   return footer;
 }
 
-footer();
+// footer();
 
 loadPokemonItens(offset, limit);
 
